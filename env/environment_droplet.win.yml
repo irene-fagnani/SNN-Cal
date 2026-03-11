@@ -1,0 +1,30 @@
+name: snn_hgcal
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - ipykernel
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - tqdm
+  - h5py
+  - imageio
+
+  # Install torch stack via conda (consistent, avoids pip DLL issues)
+  - pytorch=2.5.1
+  - torchvision=0.20.1
+  - torchaudio=2.5.1
+  - pytorch-cuda=12.4
+
+  - pip:
+      - nir==1.0.4
+      - nirtorch==1.0
+      - snntorch==0.9.1
+      - torchmetrics==1.6.0
